@@ -1,0 +1,31 @@
+body {
+    padding: 20px;
+}
+
+.logo {
+    margin: 15px;
+    font-size: 18px;
+}
+
+.nav-link {
+    color: black;
+}
+.nav-link.active {
+    font-weight: bold;
+}
+
+.table tbody tr:hover {
+    background-color: #cccccc;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+#tutor-info {
+    display: none;
+}
+#form-response {
+    display: none;
+}

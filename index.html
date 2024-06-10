@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find a Tutor</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        <div class="logo"><strong>Find a Tutor</strong></div>
+        <nav class="nav flex-column">
+          <a class="nav-link" id="home-link" class="active" href="#" onclick="showHomePage()">Home</a>
+          <a class="nav-link" id="browse-link" href="#" onclick="showBrowsePage()">Browse</a>
+          <a class="nav-link" id="settings-link" href="#">Settings</a>
+        </nav>
+      </div>
+      <div class="col-9">
+        <div id="home-page">
+          <h2>Available tutors</h2>
+          <input type="text" id="search" class="form-control mb-3" placeholder="Search">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Title</th>
+                <th>Subjects</th>
+              </tr>
+            </thead>
+            <tbody id="tutor-list">
+              <!-- Tutor list will be loaded here -->
+            </tbody>
+          </table>
+        </div>
+        <div id="browse-page" class="hidden">
+          <h2>Subjects</h2>
+          <ul id="subject-list" class="list-group">
+            <!-- Subject list will be loaded here -->
+          </ul>
+        </div>
+        <div id="tutor-info" class="mt-5">
+          <h3>Tutor info</h3>
+          <a href="#" onclick="hideTutorInfo()">← Back</a>
+          <div id="info-content">
+            <!-- Tutor info will be loaded here -->
+          </div>
+          <form id="book-tutor-form" class="mt-3">
+            <div class="mb-3">
+              <label for="name" class="form-label">Your name</label>
+              <input type="text" id="name" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Your phone number</label>
+              <input type="text" id="phone" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="time" class="form-label">Time</label>
+              <input type="text" id="time" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="address" class="form-label">Your address</label>
+              <input type="text" id="address" class="form-control">
+            </div>
+            <button type="button" id="submit-button" class="btn btn-primary" onclick="submitForm()">Submit!</button>
+          </form>
+          <div id="form-response" class="mt-3">
+            <!-- Form response will be loaded here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>
